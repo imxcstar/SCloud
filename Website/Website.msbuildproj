@@ -1,0 +1,20 @@
+<Project Sdk="Peachpie.NET.Sdk/1.1.10">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>SCloud</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile
+      Include="**/*.php"
+      Exclude="obj/**;bin/**;" />
+    <Content
+      Include="**"
+      Exclude="**/*.php;obj/**;bin/**;*.msbuildproj;.vscode/**;.vs/**;">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <None Remove="**" />
+  </ItemGroup>
+</Project>
